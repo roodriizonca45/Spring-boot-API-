@@ -1,4 +1,4 @@
-[README.md](https://github.com/user-attachments/files/23534772/README.md)
+
 ## API REST – Gestión de Productos
 **Alumno:** Rodrigo Angel Zonca Calise
 **Legajo:** 51164

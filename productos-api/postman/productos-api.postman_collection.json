@@ -1,0 +1,177 @@
+{
+  "info": {
+    "name": "productos-api",
+    "_postman_id": "7a2d9a9b-1d2b-4aa1-9e77-000000000001",
+    "description": "Colección para probar la API de Productos (Spring Boot, H2, JPA).",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Listar todos",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/api/productos",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "productos"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Obtener por ID",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/api/productos/1",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "productos",
+            "1"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Filtrar por categoría",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/api/productos/categoria/ELECTRONICA",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "productos",
+            "categoria",
+            "ELECTRONICA"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Crear (POST)",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "http://localhost:8080/api/productos",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "productos"
+          ]
+        },
+        "body": {
+          "mode": "raw",
+          "raw": "{\"nombre\": \"Mouse Inalámbrico Pro\", \"descripcion\": \"Bluetooth 5.0, 16000 DPI\", \"precio\": 59999.9, \"stock\": 20, \"categoria\": \"ELECTRONICA\"}"
+        }
+      }
+    },
+    {
+      "name": "Actualizar (PUT)",
+      "request": {
+        "method": "PUT",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "http://localhost:8080/api/productos/1",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "productos",
+            "1"
+          ]
+        },
+        "body": {
+          "mode": "raw",
+          "raw": "{\"nombre\": \"Teclado Mecánico TKL RGB\", \"descripcion\": \"Switches rojos, iluminación RGB\", \"precio\": 52999.99, \"stock\": 10, \"categoria\": \"ELECTRONICA\"}"
+        }
+      }
+    },
+    {
+      "name": "Actualizar stock (PATCH)",
+      "request": {
+        "method": "PATCH",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "http://localhost:8080/api/productos/1/stock",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "productos",
+            "1",
+            "stock"
+          ]
+        },
+        "body": {
+          "mode": "raw",
+          "raw": "{\"stock\": 7}"
+        }
+      }
+    },
+    {
+      "name": "Eliminar (DELETE)",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/api/productos/1",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "productos",
+            "1"
+          ]
+        }
+      }
+    }
+  ]
+}
